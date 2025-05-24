@@ -1,229 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRE Sales Form</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f7f6;
-            position: relative;
-        }
-        .watermark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            background-image: url('ornaments.jpg');
-            background-size: 1200px 1200px;
-            background-repeat: repeat;
-            opacity: 0.5;
-        }
-        .logo {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            width: 80px;
-            padding-top: 15px;
-            padding-left: 15px;
-            z-index: 10;
-        }
-        .form-container {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            z-index: 1;
-        }
-        .form-container h2 {
-            text-align: center;
-            margin-bottom: 12px;
-            color: #333;
-        }
-        label {
-            font-weight: 500;
-            margin: 6px 0 4px;
-            display: block;
-        }
-        input, select {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .msg {
-            text-align: center;
-            margin-top: 8px;
-            font-weight: 500;
-            visibility: hidden;
-        }
-        .msg.visible {
-            visibility: visible;
-        }
-        #loginSection {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        #salesFormSection {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRE Sales Form</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f7f6;
+      position: relative;
+    }
+    .watermark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url('ornaments.jpg');
+      background-size: 1200px 1200px;
+      background-repeat: repeat;
+      opacity: 0.5;
+    }
+    .logo {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 80px;
+      padding-top: 15px;
+      padding-left: 15px;
+      z-index: 10;
+    }
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      z-index: 1;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 12px;
+      color: #333;
+    }
+    label {
+      font-weight: 500;
+      margin: 6px 0 4px;
+      display: block;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .msg {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: 500;
+      visibility: hidden;
+    }
+    .msg.visible {
+      visibility: visible;
+    }
+    #loginSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #salesFormSection {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Logo -->
-    <img src="Logo1.jpg" alt="Logo" class="logo">
+  <!-- Logo -->
+  <img src="Logo1.jpg" alt="Logo" class="logo">
 
-    <!-- Watermark -->
-    <div class="watermark"></div>
+  <!-- Watermark -->
+  <div class="watermark"></div>
 
-    <!-- Login Section -->
-    <div class="form-container" id="loginSection">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+  <!-- Login Section -->
+  <div class="form-container" id="loginSection">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
 
-            <button type="submit">Login</button>
-        </form>
-        <div class="msg" id="loginMessage"></div>
-    </div>
+      <button type="submit">Login</button>
+    </form>
+    <div class="msg" id="loginMessage"></div>
+  </div>
 
-    <!-- Sales Form Section -->
-    <div class="form-container" id="salesFormSection">
-        <h2>CRE Sales Form</h2>
-        <form id="salesForm">
-            <label for="date">Date:</label>
-            <input type="date" name="date" id="date" required>
-            
-            <label for="staffName">Staff Name:</label>
-            <select name="staffName" id="staffName" required>
-                <option value="" disabled selected>Select Staff</option>
-                <option value="Renuka">Renuka</option>
-                <option value="Suman">Suman</option>
-                <option value="Keerthi">Vaishnavi</option>
-                <option value="Keerthi">Shravani</option>
-            </select>
+  <!-- Sales Form Section -->
+  <div class="form-container" id="salesFormSection">
+    <h2>CRE Sales Form</h2>
+    <form id="salesForm">
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date" required>
+      
+      <label for="staffName">Staff Name:</label>
+      <select name="staffName" id="staffName" required>
+        <option value="" disabled selected>Select Staff</option>
+        <option value="Renuka">Renuka</option>
+        <option value="Suman">Suman</option>
+        <option value="Vaishnavi">Vaishnavi</option>
+        <option value="Shravani">Shravani</option>
+      </select>
 
-            <label for="schemeCount">Scheme (Count):</label>
-            <input type="number" name="schemeCount" id="schemeCount" required>
-            
-            <label for="Bills">Bills:</label>
-            <input type="number" name="Bills" id="Bills" required>
+      <label for="schemeCount">Scheme (Count):</label>
+      <input type="number" name="schemeCount" id="schemeCount" required>
 
-            <label for="schemeValue">Scheme (Value):</label>
-            <input type="number" name="schemeValue" id="schemeValue" required>
+      <label for="bills">Bills:</label>
+      <input type="number" name="bills" id="bills" required> <!-- ✅ fixed here -->
 
-            <label for="referencesCount">References (Count):</label>
-            <input type="number" name="referencesCount" id="referencesCount" required>
+      <label for="schemeValue">Scheme (Value):</label>
+      <input type="number" name="schemeValue" id="schemeValue" required>
 
-            <button type="submit">Submit</button>
-        </form>
-        <div class="msg" id="message"></div>
-    </div>
+      <label for="referencesCount">References (Count):</label>
+      <input type="number" name="referencesCount" id="referencesCount" required>
 
-    <script>
-        const loginForm = document.getElementById('loginForm');
-        const loginSection = document.getElementById('loginSection');
-        const salesFormSection = document.getElementById('salesFormSection');
-        const loginMessage = document.getElementById('loginMessage');
+      <button type="submit">Submit</button>
+    </form>
+    <div class="msg" id="message"></div>
+  </div>
 
-        const salesForm = document.getElementById('salesForm');
-        const messageBox = document.getElementById('message');
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const loginSection = document.getElementById('loginSection');
+    const salesFormSection = document.getElementById('salesFormSection');
+    const loginMessage = document.getElementById('loginMessage');
 
-        const validCredentials = {
-            username: 'CRE@PJEJEWELS.COM',
-            password: 'PJE@16105!'
-        };
+    const salesForm = document.getElementById('salesForm');
+    const messageBox = document.getElementById('message');
 
-        loginForm.onsubmit = function(event) {
-            event.preventDefault();
+    const validCredentials = {
+      username: 'CRE@PJEJEWELS.COM',
+      password: 'PJE@16105!'
+    };
 
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+    loginForm.onsubmit = function(event) {
+      event.preventDefault();
 
-            if (username === validCredentials.username && password === validCredentials.password) {
-                loginMessage.textContent = "✅ Login successful!";
-                loginMessage.style.color = "green";
-                loginMessage.classList.add('visible');
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
 
-                setTimeout(() => {
-                    loginSection.style.display = 'none';
-                    salesFormSection.style.display = 'block';
-                }, 1000);
-            } else {
-                loginMessage.textContent = "❌ Invalid username or password.";
-                loginMessage.style.color = "red";
-                loginMessage.classList.add('visible');
-            }
-        };
+      if (username === validCredentials.username && password === validCredentials.password) {
+        loginMessage.textContent = "✅ Login successful!";
+        loginMessage.style.color = "green";
+        loginMessage.classList.add('visible');
 
-        salesForm.onsubmit = async function(event) {
-            event.preventDefault();
+        setTimeout(() => {
+          loginSection.style.display = 'none';
+          salesFormSection.style.display = 'block';
+        }, 1000);
+      } else {
+        loginMessage.textContent = "❌ Invalid username or password.";
+        loginMessage.style.color = "red";
+        loginMessage.classList.add('visible');
+      }
+    };
 
-            const formData = new FormData(salesForm);
+    salesForm.onsubmit = async function(event) {
+      event.preventDefault();
 
-            try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbwvqeb8JduUVl2DrdaPL6muL70RCxGMNC3ZtqDqKnKnmVaO702qoBFmoWCAgo9IxEep/exec', {
-                    method: 'POST',
-                    body: formData
-                });
+      const formData = new FormData(salesForm);
 
-                const result = await response.text();
-                messageBox.classList.add('visible');
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbwvqeb8JduUVl2DrdaPL6muL70RCxGMNC3ZtqDqKnKnmVaO702qoBFmoWCAgo9IxEep/exec', {
+          method: 'POST',
+          body: formData
+        });
 
-                if (result.includes("Already submitted")) {
-                    messageBox.textContent = "⚠️ " + result;
-                    messageBox.style.color = "red";
-                } else {
-                    messageBox.textContent = "✅ Submitted successfully!";
-                    messageBox.style.color = "green";
-                    salesForm.reset();
-                }
+        const result = await response.text();
+        messageBox.classList.add('visible');
 
-                setTimeout(() => {
-                    messageBox.classList.remove('visible');
-                }, 5000);
-            } catch (error) {
-                messageBox.textContent = "❌ Submission failed. Please try again.";
-                messageBox.style.color = "red";
-                setTimeout(() => {
-                    messageBox.classList.remove('visible');
-                }, 5000);
-            }
-        };
-    </script>
+        if (result.includes("Already submitted")) {
+          messageBox.textContent = "⚠️ " + result;
+          messageBox.style.color = "red";
+        } else {
+          messageBox.textContent = "✅ Submitted successfully!";
+          messageBox.style.color = "green";
+          salesForm.reset();
+        }
+
+        setTimeout(() => {
+          messageBox.classList.remove('visible');
+        }, 5000);
+      } catch (error) {
+        messageBox.textContent = "❌ Submission failed. Please try again.";
+        messageBox.style.color = "red";
+        setTimeout(() => {
+          messageBox.classList.remove('visible');
+        }, 5000);
+      }
+    };
+  </script>
 
 </body>
 </html>
